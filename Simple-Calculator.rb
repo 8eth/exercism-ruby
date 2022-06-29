@@ -4,7 +4,7 @@ class SimpleCalculator
     class UnsupportedOperation < StandardError
     end
   
-    def self.calculate(first_operand, second_operand, operation) # self.calculate('1', 2, '+')
+    def self.calculate(first_operand, second_operand, operation)
       unless first_operand.is_a?(Integer) && second_operand.is_a?(Integer) 
         raise ArgumentError.new("error")
       end
@@ -13,8 +13,8 @@ class SimpleCalculator
         raise UnsupportedOperation.new("error")
       end
   
-      if operation == '+' # if '+' == '+'
-        "#{first_operand} + #{second_operand} = #{first_operand + second_operand}" # '1' + 2 = 
+      if operation == '+' 
+        "#{first_operand} + #{second_operand} = #{first_operand + second_operand}"
       elsif operation == '/' && second_operand != 0
         "#{first_operand} / #{second_operand} = #{first_operand / second_operand}"
       elsif operation == '/' && second_operand == 0
