@@ -13,12 +13,12 @@ class Clock
     end
 
     def minute_angle
-        @time.min * 6 # 360 / 60 = 6 each minute is 6 degrees 
+        @time.min * 6 # 360 / 60 = 6 (each minute is 6 degrees) 
     end
 
     def hour_angle
-        hour_angle = (@time.hour % 12) * 30 # 360 / 12 = 30 degrees between each number on the clock
-        minute_angle = (@time.min / 60.0) * 30 # min / 60 minutes in an hour. 30 degrees in an hour.
+        hour_angle = (@time.hour % 12) * 30 # 360 / 12 = 30 degrees between each number on the clock (one hour)
+        minute_angle = (@time.min / 60.0) * 30 # current min / 60 minutes in an hour times 30 degrees in an hour
         hour_angle + minute_angle
     end
     
