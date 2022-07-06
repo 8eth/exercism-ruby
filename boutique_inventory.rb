@@ -22,9 +22,9 @@ class BoutiqueInventory
     def total_stock
       total_stock = 0
       
-      @items.each do
-        |item| item[:quantity_by_size].each do
-          |key, value| total_stock = total_stock + value
+      @items.each do |item| 
+        item[:quantity_by_size].each do |key, value| 
+          total_stock = total_stock + value
         end
       end
     
